@@ -90,7 +90,7 @@ function App() {
 
     useEffect(()=> {
       divForScroll.current?.scrollIntoView({ behavior : 'smooth' })
-    }, [messages])
+    }, [messages, inputRef])
   
 
   return (
