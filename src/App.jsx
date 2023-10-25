@@ -42,7 +42,6 @@ function App() {
   
     try{
       setMessage('');
-      // inputRef.current.focus();
       
       await addDoc(collection(db, "Messages"), {
         text : message,
@@ -89,12 +88,11 @@ function App() {
   
 
     useEffect(()=> {
+      inputRef.current.focus();
       divForScroll.current?.scrollIntoView({ behavior : 'smooth' })
     }, [messages])
   
-    useEffect(() => {
-      inputRef.current.focus();
-    }, [messages])
+   
 
   return (
     <>
