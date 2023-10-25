@@ -53,6 +53,8 @@
   background-color: #fff;
   color: #fff; 
   width: 100%;
+  position: sticky;
+  top: 0;
 }
 
 .navbar h2 {
