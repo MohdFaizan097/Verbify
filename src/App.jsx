@@ -34,6 +34,7 @@ function App() {
   const inputRef = useRef();
   
   const submitHandler = async(e) => {
+    inputRef.current.focus();
     e.preventDefault()
 
     if(message === '') {
@@ -49,7 +50,6 @@ function App() {
         uri : user.photoURL,
         createdAt : serverTimestamp()
       });
-      inputRef.current.focus();
       
     }
     catch(error){
