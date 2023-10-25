@@ -179,4 +179,15 @@ input {
   .box-1{
     display: none;
   }
+  .chat-box {
+    height: 100vh;
+    padding: 1rem;
+    overflow: auto;
+    overflow-y: scroll;
+  }
+  
+  .chat-box::-webkit-scrollbar{
+    display: none;
+  }
+  
 }
