@@ -1,0 +1,58 @@
+.message-box {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.message {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: 15px;
+}
+
+
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+
+}
+
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.message-text {
+  padding: 10px;
+  background-color: #0074d9; /* Example background color; you can change it */
+  color: #fff; /* Example text color; you can change it */
+  border-radius: 5px 5px 5px 5px ;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 200px;
+  background: linear-gradient(98.63deg, #24e4f0 0%, #358ff9 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--primary-font);
+  font-family: 'Noto Sans', sans-serif;;
+}
+
+.flex-end-msg {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
