@@ -49,7 +49,7 @@ function App() {
         uri : user.photoURL,
         createdAt : serverTimestamp()
       });
-      
+      inputRef.current.focus();
     }
     catch(error){
       alert(error)
@@ -88,7 +88,6 @@ function App() {
   
 
     useEffect(()=> {
-      inputRef.current.focus();
       divForScroll.current?.scrollIntoView({ behavior : 'smooth' })
     }, [messages])
   
