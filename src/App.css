@@ -94,6 +94,8 @@
 .input-box {
   display: flex;
   gap: 5px;
+  position: sticky;
+  bottom: 0;
 }
 
 .form-box {
@@ -102,16 +104,15 @@
   border-top: 1px solid #ccc;
   padding-left: 15px;
   padding-right: 10px;
-  position: sticky;
-  bottom: 0;
 }
 
 input {
   width: 95%;
-  background: transparent;
+  background: #fff;
   border: none;
   outline: none;
   padding: 10px 5px;
+
 
 }
 
