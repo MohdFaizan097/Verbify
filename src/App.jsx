@@ -30,6 +30,8 @@ function App() {
   const logoutHandler = () => {
     signOut(auth)
   }
+
+  const inputRef = useRef();
   
   const submitHandler = async(e) => {
     e.preventDefault()
@@ -47,7 +49,7 @@ function App() {
         uri : user.photoURL,
         createdAt : serverTimestamp()
       });
-      
+      inputRef.current.focus();
       
     }
     catch(error){
@@ -121,7 +123,12 @@ function App() {
           
         <form className='form-box' onSubmit={submitHandler}> 
         <div className="input-box">
-          <input type="text" placeholder='Type a message' value={message} onChange={(e) => setMessage(e.target.value)}/>
+          <input 
+          type="text" 
+          placeholder='Type a message' 
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          ref={inputRef} />
           <button type='submit'className='submit-btn'>Send</button>
         </div>
         </form>
