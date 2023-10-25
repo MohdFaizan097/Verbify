@@ -3,7 +3,6 @@ import Message from './Components/Message'
 import {getAuth,onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signOut} from 'firebase/auth'
 import { app } from "./firebase"
 import { useEffect, useRef, useState } from 'react';
-import SignIn from './Components/Signin';
 import {getFirestore, addDoc, collection, serverTimestamp, onSnapshot, query, orderBy} from 'firebase/firestore';
 
 const db = getFirestore(app);
@@ -133,7 +132,14 @@ function App() {
       </div>
       </div>
       ) : (
-       <SignIn />
+        <div className="sign-in-page">
+        <div className="flex">
+        <h3>Verbify.</h3>
+        <p>Real time. ChatApp</p>
+        <button onClick={loginHandler}>Sign in with google</button>
+        </div>
+       
+    </div>
       )
      }
      
