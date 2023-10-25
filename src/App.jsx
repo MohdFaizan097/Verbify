@@ -42,7 +42,7 @@ function App() {
   
     try{
       setMessage('');
-      inputRef.current.focus();
+      // inputRef.current.focus();
       
       await addDoc(collection(db, "Messages"), {
         text : message,
@@ -90,8 +90,11 @@ function App() {
 
     useEffect(()=> {
       divForScroll.current?.scrollIntoView({ behavior : 'smooth' })
-    }, [messages, inputRef])
+    }, [messages])
   
+    useEffect(() => {
+      inputRef.current.focus();
+    }, [messages])
 
   return (
     <>
@@ -116,12 +119,12 @@ function App() {
               <Message key={user.id} user ={item.uid === user.uid?'me':"other"} text={item.text} uri={item.uri}/>
             ))
           }
+        <div ref={divForScroll}></div>
         </div>
 
        
           
         <form className='form-box' onSubmit={submitHandler}> 
-        <div ref={divForScroll}></div>
         <div className="input-box">
           <input 
           type="text" 
