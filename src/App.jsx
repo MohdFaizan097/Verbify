@@ -42,7 +42,6 @@ function App() {
   
     try{
       setMessage('');
-      inputRef.current.focus();
       
       await addDoc(collection(db, "Messages"), {
         text : message,
@@ -50,6 +49,7 @@ function App() {
         uri : user.photoURL,
         createdAt : serverTimestamp()
       });
+      inputRef.current.focus();
       
     }
     catch(error){
