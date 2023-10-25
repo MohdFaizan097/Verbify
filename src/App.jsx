@@ -34,7 +34,6 @@ function App() {
   const inputRef = useRef();
   
   const submitHandler = async(e) => {
-    inputRef.current.focus();
     e.preventDefault()
 
     if(message === '') {
@@ -43,6 +42,7 @@ function App() {
   
     try{
       setMessage('');
+      inputRef.current.focus();
       
       await addDoc(collection(db, "Messages"), {
         text : message,
